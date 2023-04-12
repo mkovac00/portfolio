@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid rgba(48, 48, 48, 0.15);
+
+  .navigation-title {
+    font-family: "Great Vibes", sans-serif;
+    font-weight: 100;
+  }
+
+  .navigation-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigation-icon {
+    margin: 8px;
+  }
+}
