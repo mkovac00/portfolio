@@ -1,9 +1,14 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
 .hero-section {
   font-family: "Staatliches", sans-serif;
-  color: #303030;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include themify($themes) {
+    color: themed("secondary-color");
+  }
 
   .hero-section__text-container {
     display: flex;
@@ -15,9 +20,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #303030;
-      color: #d2d1c4;
       padding: 0 8px 0 8px;
+      @include themify($themes) {
+        background-color: themed("secondary-color");
+      }
+      @include themify($themes) {
+        color: themed("primary-color");
+      }
     }
 
     .hero-section__h1 {
@@ -53,7 +62,10 @@
     .hero-section__image {
       width: 300px;
       height: 315px;
-      border-bottom: 15px solid #303030;
+      border-bottom: 15px solid;
+      @include themify($themes) {
+        border-color: themed("secondary-color");
+      }
     }
   }
 }

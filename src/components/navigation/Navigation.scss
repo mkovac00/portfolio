@@ -1,3 +1,6 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
 .navigation {
   display: flex;
   flex-direction: row;
@@ -10,11 +13,17 @@
   margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border: 2px solid rgba(48, 48, 48, 0.15);
+  border: 2px solid;
+  @include themify($themes) {
+    border-color: themed("border");
+  }
 
   .navigation-title {
     font-family: "Great Vibes", sans-serif;
     font-weight: 100;
+    @include themify($themes) {
+      color: themed("secondary-color");
+    }
   }
 
   .navigation-social-media {
@@ -25,7 +34,9 @@
 
   .navigation-icon {
     margin: 8px;
-    color: #303030;
+    @include themify($themes) {
+      color: themed("secondary-color");
+    }
   }
 }
 
@@ -41,7 +52,10 @@
   margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border: 2px solid rgba(48, 48, 48, 0.15);
+  border: 2px solid;
+  @include themify($themes) {
+    border-color: themed("border");
+  }
 
   .navigation-title {
     font-family: "Great Vibes", sans-serif;
@@ -56,7 +70,9 @@
 
   .navigation-icon {
     margin: 8px;
-    color: #303030;
+    @include themify($themes) {
+      background-color: themed("secondary-color");
+    }
   }
 }
 
