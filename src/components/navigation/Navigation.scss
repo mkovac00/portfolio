@@ -60,6 +60,9 @@
   .navigation-title {
     font-family: "Great Vibes", sans-serif;
     font-weight: 100;
+    @include themify($themes) {
+      color: themed("secondary-color");
+    }
   }
 
   .navigation-social-media {
@@ -71,7 +74,7 @@
   .navigation-icon {
     margin: 8px;
     @include themify($themes) {
-      background-color: themed("secondary-color");
+      color: themed("secondary-color");
     }
   }
 }
