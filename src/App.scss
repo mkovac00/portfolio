@@ -5,3 +5,14 @@
 html {
   background-color: #d2d1c4;
 }
+
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .app {
+    width: 100%;
+    max-width: 1366px;
+  }
+}

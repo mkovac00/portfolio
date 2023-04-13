@@ -6,6 +6,8 @@
   height: 40px;
   margin-left: 40px;
   margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
   border: 2px solid rgba(48, 48, 48, 0.15);
@@ -23,5 +25,47 @@
 
   .navigation-icon {
     margin: 8px;
+    color: #303030;
+  }
+}
+
+.navigation-mobile {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid rgba(48, 48, 48, 0.15);
+
+  .navigation-title {
+    font-family: "Great Vibes", sans-serif;
+    font-weight: 100;
+  }
+
+  .navigation-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigation-icon {
+    margin: 8px;
+    color: #303030;
+  }
+}
+
+@media only screen and (max-width: 585px) {
+  .navigation {
+    display: none;
+  }
+
+  .navigation-mobile {
+    display: flex;
   }
 }

@@ -1,6 +1,15 @@
 .layout {
   margin-left: 40px;
   margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   border: 2px solid rgba(48, 48, 48, 0.15);
+}
+
+@media only screen and (max-width: 584px) {
+  .layout {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
