@@ -1,0 +1,77 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.introduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .introduction-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+
+    .introduction__h1 {
+      font-size: 48px;
+      font-weight: 100;
+      margin: 0;
+      @include themify($themes) {
+        color: themed("secondary-color");
+      }
+    }
+
+    .introduction__p {
+      font-size: 24px;
+      font-weight: 100;
+      margin: 0;
+      @include themify($themes) {
+        color: themed("secondary-color");
+      }
+    }
+  }
+
+  .introduction-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+    height: 100%;
+    @include themify($themes) {
+      background-color: themed("image-bg");
+    }
+
+    .bitmoji-image {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .introduction {
+    .introduction-content {
+      .introduction__h1 {
+        font-size: 36px;
+      }
+
+      .introduction__p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .introduction {
+    flex-direction: column;
+    .introduction-content {
+      width: 100%;
+    }
+
+    .introduction-image {
+      width: 100%;
+    }
+  }
+}
