@@ -16,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  transition: all 0.5s ease-in-out;
   @include themify($themes) {
     background-color: themed("primary-color");
   }
