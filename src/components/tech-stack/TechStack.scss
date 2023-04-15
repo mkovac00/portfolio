@@ -1,0 +1,40 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.tech-stack-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .tech-stack-section__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    width: 500px;
+
+    .tech-stack__item {
+      margin: 20px;
+      flex: 1 0 auto;
+
+      @include themify($themes) {
+        color: themed("secondary-color");
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .tech-stack-section {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .tech-stack-section__content {
+      .tech-stack__item {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}

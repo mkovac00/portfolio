@@ -2,9 +2,11 @@ import { useState } from "react";
 import "./App.scss";
 
 import Layout from "./components/layout/Layout";
+import Title from "./components/title/Title";
 import Navigation from "./components/navigation/Navigation";
 import Hero from "./components/hero/Hero";
 import Introduction from "./components/introduction/Introduction";
+import TechStack from "./components/tech-stack/TechStack";
 
 import { ThemeContext } from "./contexts/theme-context";
 import { introduction } from "./assets/content/introduction";
@@ -24,6 +26,8 @@ function App() {
                 <Introduction h1={introduction.h1} p={introduction.p} />
               }
             />
+            <Layout children={<Title title="TECH STACK" />} />
+            <Layout children={<TechStack />} />
           </div>
         </div>
       </div>
