@@ -5,6 +5,11 @@
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 40px;
+  position: sticky;
+  top: 0;
+  @include themify($themes) {
+    background-color: themed("primary-color");
+  }
 
   .navigation-top {
     display: flex;
@@ -29,6 +34,11 @@
       font-size: 32px;
       font-weight: 100;
       margin: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
       @include themify($themes) {
         color: themed("secondary-color");
       }
