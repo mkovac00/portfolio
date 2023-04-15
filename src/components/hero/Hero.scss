@@ -2,168 +2,93 @@
 @import "../../assets/variables";
 
 .hero-section {
-  font-family: "Staatliches", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  @include themify($themes) {
-    color: themed("secondary-color");
-  }
 
-  .hero-section__text-container {
+  .hero-section__text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 
-    .hero-section__text-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0 8px 0 8px;
-      @include themify($themes) {
-        background-color: themed("secondary-color");
-      }
-      @include themify($themes) {
-        color: themed("primary-color");
-      }
-    }
-
     .hero-section__h1 {
       font-size: 128px;
-    }
-
-    .hero-section__h2 {
-      font-size: 96px;
+      font-weight: 100;
+      margin: 0;
+      @include themify($themes) {
+        color: themed("secondary-color");
+      }
     }
 
     .hero-section__h3 {
-      font-size: 64px;
-    }
-
-    .hero-section__h4 {
-      font-size: 36px;
-    }
-
-    .hero-section__h1,
-    .hero-section__h2,
-    .hero-section__h3,
-    .hero-section__h4 {
+      font-size: 48px;
+      font-weight: 100;
       margin: 0;
-    }
-  }
-
-  .hero-section__image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-
-    .hero-section__image {
-      width: 300px;
-      height: 315px;
-      border-bottom: 15px solid;
       @include themify($themes) {
-        border-color: themed("secondary-color");
+        color: themed("secondary-color");
       }
     }
   }
 }
 
-@media only screen and (max-width: 1230px) {
+@media only screen and (max-width: 1220px) {
   .hero-section {
-    .hero-section__text-container {
+    .hero-section__text-wrapper {
       .hero-section__h1 {
         font-size: 96px;
-      }
-
-      .hero-section__h2 {
-        font-size: 64px;
       }
 
       .hero-section__h3 {
         font-size: 36px;
       }
-
-      .hero-section__h4 {
-        font-size: 24px;
-      }
-    }
-
-    .hero-section__image-container {
-      .hero-section__image {
-        width: 250px;
-        height: 265px;
-      }
     }
   }
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 940px) {
   .hero-section {
-    flex-direction: column;
-
-    .hero-section__text-container {
-      align-items: center;
-    }
-
-    .hero-section__image-container {
-      align-self: center;
-
-      .hero-section__image {
-        width: 250px;
-        height: 265px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 670px) {
-  .hero-section {
-    .hero-section__text-container {
-      .hero-section__text-wrapper {
-        text-align: center;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 585px) {
-  .hero-section {
-    .hero-section__text-container {
+    .hero-section__text-wrapper {
       .hero-section__h1 {
-        text-align: center;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  .hero-section {
-    .hero-section__text-container {
-      .hero-section__h1 {
-        font-size: 68px;
-      }
-
-      .hero-section__h2 {
-        font-size: 46px;
+        font-size: 84px;
       }
 
       .hero-section__h3 {
         font-size: 32px;
       }
+    }
+  }
+}
 
-      .hero-section__h4 {
-        font-size: 20px;
+@media only screen and (max-width: 794px) {
+  .hero-section {
+    .hero-section__text-wrapper {
+      .hero-section__h1 {
+        font-size: 64px;
+      }
+
+      .hero-section__h3 {
+        font-size: 28px;
       }
     }
   }
 }
 
-@media only screen and (max-width: 326px) {
+@media only screen and (max-width: 710px) {
   .hero-section {
-    .hero-section__text-container {
-      text-align: center;
+    .hero-section__text-wrapper {
+      align-items: center;
+
+      .hero-section__h1 {
+        font-size: 74px;
+        text-align: center;
+      }
+
+      .hero-section__h3 {
+        font-size: 24px;
+        text-align: center;
+        max-width: 400px;
+      }
     }
   }
 }
