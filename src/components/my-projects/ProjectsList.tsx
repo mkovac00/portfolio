@@ -14,6 +14,7 @@ const ProjectsList = () => {
       image={project.image}
       hasDemo={project.title === "TRAVELSHARE" ? false : true}
       hasCode={true}
+      reverseDirection={index % 2 === 0 ? false : true}
     />
   ));
 

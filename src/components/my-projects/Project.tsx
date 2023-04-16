@@ -8,12 +8,20 @@ type ProjectProps = {
   image: string;
   hasDemo: boolean;
   hasCode: boolean;
+  reverseDirection: boolean;
 };
 
 const Project = (props: ProjectProps) => {
   return (
     <>
-      <div className="project-container">
+      <div
+        className="project-container"
+        style={
+          props.reverseDirection
+            ? { flexDirection: "row-reverse" }
+            : { flexDirection: "row" }
+        }
+      >
         <div className="project-image-wrapper">
           <img
             src={props.image}
