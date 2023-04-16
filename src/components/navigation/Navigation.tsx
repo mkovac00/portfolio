@@ -2,13 +2,6 @@ import { useContext } from "react";
 import "./Navigation.scss";
 
 import { ThemeContext } from "../../contexts/theme-context";
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  useScroll,
-  useTransform,
-} from "framer-motion";
 
 const Navigation = () => {
   const { theme, setTheme } = useContext(ThemeContext);

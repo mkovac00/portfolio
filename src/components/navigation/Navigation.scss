@@ -7,6 +7,7 @@
   margin-top: 40px;
   position: sticky;
   top: 0;
+  z-index: 1;
   @include themify($themes) {
     background-color: themed("primary-color");
   }

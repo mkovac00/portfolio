@@ -7,6 +7,7 @@ import Navigation from "./components/navigation/Navigation";
 import Hero from "./components/hero/Hero";
 import Introduction from "./components/introduction/Introduction";
 import TechStack from "./components/tech-stack/TechStack";
+import ProjectsList from "./components/my-projects/ProjectsList";
 
 import { ThemeContext } from "./contexts/theme-context";
 import { introduction } from "./assets/content/introduction";
@@ -28,6 +29,10 @@ function App() {
             />
             <Layout children={<Title title="TECH STACK" />} />
             <Layout children={<TechStack />} />
+            <Layout children={<Title title="MY PROJECTS" />} />
+            {/* ProjectsList is not put into Layout because each item inside
+            that list is already put into a Layout component. */}
+            <ProjectsList />
           </div>
         </div>
       </div>
