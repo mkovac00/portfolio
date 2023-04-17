@@ -16,7 +16,7 @@ const MoreAbout = () => {
       <div className="about-me__content">
         <h2 className="about-me__h2">{aboutMe.title}</h2>
         <p className="about-me__p">{aboutMe.content}</p>
-        <Button text="DOWNLOAD MY CV" />
+        <Button text="DOWNLOAD CV" />
       </div>
     </section>
   );

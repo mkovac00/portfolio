@@ -2,19 +2,15 @@ import "./Introduction.scss";
 
 import Button from "../button/Button";
 
+import { introduction } from "../../assets/content/introduction";
 import myBitmoji from "../../assets/images/mario.png";
 
-type IntroductionProps = {
-  h1: string;
-  p: string;
-};
-
-const Introduction = (props: IntroductionProps) => {
+const Introduction = () => {
   return (
     <section className="introduction">
       <div className="introduction-content">
-        <h1 className="introduction__h1">{props.h1}</h1>
-        <p className="introduction__p">{props.p}</p>
+        <h1 className="introduction__h1">{introduction.h1}</h1>
+        <p className="introduction__p">{introduction.p}</p>
         <Button text={"CONTACT ME"} />
       </div>
       <div className="introduction-image">

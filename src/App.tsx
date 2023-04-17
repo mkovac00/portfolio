@@ -25,11 +25,7 @@ function App() {
           <div className="app">
             <Navigation />
             <Layout children={<Hero />} />
-            <Layout
-              children={
-                <Introduction h1={introduction.h1} p={introduction.p} />
-              }
-            />
+            <Layout children={<Introduction />} />
             <Layout children={<Title title="TECH STACK" />} />
             <Layout children={<TechStack />} />
             <Layout children={<Title title="MY PROJECTS" />} />
