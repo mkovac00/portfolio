@@ -1,0 +1,69 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact-section__h2 {
+    font-size: 36px;
+    font-weight: 100;
+    margin: 0;
+    padding-right: 20px;
+    @include themify($themes) {
+      color: themed("secondary-color");
+    }
+  }
+
+  .contact-section__email-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-section__social-media-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+
+    .contact-section__social-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .contact-section {
+    .contact-section__h2 {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .contact-section__email-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-section__social-media-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .contact-section__social-media {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

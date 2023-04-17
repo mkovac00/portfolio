@@ -9,6 +9,7 @@ import Introduction from "./components/about-me/Introduction";
 import TechStack from "./components/tech-stack/TechStack";
 import ProjectsList from "./components/my-projects/ProjectsList";
 import MoreAbout from "./components/about-me/MoreAbout";
+import Contacts from "./components/contact/Contacts";
 
 import { ThemeContext } from "./contexts/theme-context";
 import { introduction } from "./assets/content/introduction";
@@ -35,6 +36,8 @@ function App() {
             that list is already put into a Layout component. */}
             <ProjectsList />
             <Layout children={<MoreAbout />} />
+            <Layout children={<Title title="CONTACT ME" />} />
+            <Layout children={<Contacts />} />
           </div>
         </div>
       </div>
