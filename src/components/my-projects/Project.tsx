@@ -1,6 +1,15 @@
 import "./Project.scss";
 
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import Button from "../button/Button";
+
+const variants = {
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, x: -200 },
+};
 
 type ProjectProps = {
   title: string;
@@ -12,9 +21,24 @@ type ProjectProps = {
 };
 
 const Project = (props: ProjectProps) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
     <>
-      <div
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={variants}
         className="project-container"
         style={
           props.reverseDirection
@@ -37,7 +61,7 @@ const Project = (props: ProjectProps) => {
             {props.hasCode && <Button text="CODE" />}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div
         className="project-container__small-screens"

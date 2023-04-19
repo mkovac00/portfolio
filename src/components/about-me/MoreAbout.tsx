@@ -1,11 +1,37 @@
 import "./MoreAbout.scss";
 
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import Button from "../button/Button";
 import { aboutMe } from "../../assets/content/about-me";
 
+const variants = {
+  visible: { opacity: 1, transition: { duration: 2 } },
+  hidden: { opacity: 0 },
+};
+
 const MoreAbout = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
-    <section className="about-me">
+    <motion.section
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
+      className="about-me"
+    >
       <div className="about-me__image-wrapper">
         <img
           src={aboutMe.image}
@@ -22,7 +48,7 @@ const MoreAbout = () => {
         <p className="about-me__p">{aboutMe.content.paragraph_5}</p>
         <Button text="DOWNLOAD CV" />
       </div>
-    </section>
+    </motion.section>
   );
 };
 
