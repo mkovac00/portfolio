@@ -36,17 +36,39 @@ const TechStack = () => {
       id="tech-stack"
     >
       <div className="tech-stack-section__content">
-        <AiFillHtml5 size={60} className="tech-stack__item" />
-        <AiFillGithub size={60} className="tech-stack__item" />
-        <DiCss3 size={60} className="tech-stack__item" />
-        <DiReact size={60} className="tech-stack__item" />
-        <DiSass size={60} className="tech-stack__item" />
-        <DiNodejsSmall size={60} className="tech-stack__item" />
-        <IoLogoJavascript size={60} className="tech-stack__item" />
-        <SiTypescript size={45} className="tech-stack__item" />
-        <SiDocker size={60} className="tech-stack__item" />
-        <SiKubernetes size={50} className="tech-stack__item" />
-        <SiFigma size={50} className="tech-stack__item" />
+        <div data-tooltip="HTML">
+          <AiFillHtml5 size={60} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="Github">
+          <AiFillGithub size={60} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="CSS">
+          <DiCss3 size={60} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="React">
+          <DiReact size={60} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="Sass">
+          <DiSass size={60} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="NodeJS">
+          <DiNodejsSmall size={60} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="JavaScript">
+          <IoLogoJavascript size={60} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="TypeScript">
+          <SiTypescript size={45} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="Docker">
+          <SiDocker size={60} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="Kubernetes">
+          <SiKubernetes size={50} className="tech-stack__item" />
+        </div>
+        <div data-tooltip="Figma">
+          <SiFigma size={50} className="tech-stack__item" />
+        </div>
       </div>
     </motion.section>
   );
