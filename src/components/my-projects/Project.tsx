@@ -63,18 +63,22 @@ const Project = (props: ProjectProps) => {
         </div>
       </motion.div>
 
-      <div
-        className="project-container__small-screens"
-        style={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(${props.image})`,
-        }}
-      >
-        <div className="project-content__small-screens">
-          <h2 className="project-container__h2__small-screens">
+      <div className="project-container__smaller-viewport">
+        <div className="project-image-wrapper__smaller-viewport">
+          <img
+            src={props.image}
+            className="project-image__smaller-viewport"
+            alt="Project screenshot"
+          />
+        </div>
+        <div className="project-content__smaller-viewport">
+          <h2 className="project-container__h2__smaller-viewport">
             {props.title}
           </h2>
-          <p className="project-container__p__small-screens">{props.content}</p>
-          <div className="project-content__buttons__small-screens">
+          <p className="project-container__p__smaller-viewport">
+            {props.content}
+          </p>
+          <div className="project-content__buttons__smaller-viewport">
             {props.hasDemo && <Button text="DEMO" />}
             {props.hasCode && <Button text="CODE" />}
           </div>

@@ -16,12 +16,6 @@ export const projectsList = [
     image: notioImage,
   },
   {
-    title: "MYWEATHER",
-    content:
-      "The website is used to check the weather conditions such as the temperature, wind speed, sky conditions and similar for any city or town you provide. Built with React/JavaScript and CSS. MyWeather was my first time using an API to gather data that I would later on display onto my website. For this project I utilized the OpenWeatherMap API free tier.",
-    image: myNewsImage,
-  },
-  {
     title: "TRAVELSHARE",
     content:
       "Travelshare is a full-stack Web application that I built using the MERN (Mongo, Express, React, Node) stack. It was my Senior thesis project for finishing the University and getting my Bachelors degree. It is a social media where you can create your user profile, share photos of your travels, view other users photos, “heart” the photos and more. Frontend built with React/JavaScript and CSS.",
