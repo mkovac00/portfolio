@@ -4,7 +4,7 @@ import Button from "../button/Button";
 
 const Contacts = () => {
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section">
       <div className="contact-section__email-wrapper">
         <h2 className="contact-section__h2">CONTACT ME VIA</h2>
         <Button text="EMAIL" />

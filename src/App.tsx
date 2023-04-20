@@ -13,7 +13,6 @@ import Contacts from "./components/contact/Contacts";
 import Footer from "./components/footer/Footer";
 
 import { ThemeContext } from "./contexts/theme-context";
-import { introduction } from "./assets/content/introduction";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -26,14 +25,15 @@ function App() {
             <Navigation />
             <Layout children={<Hero />} />
             <Layout children={<Introduction />} />
-            <Layout children={<Title title="TECH STACK" />} />
+            <Layout children={<Title id="tech-stack" title="TECH STACK" />} />
             <Layout children={<TechStack />} />
-            <Layout children={<Title title="MY PROJECTS" />} />
+            <Layout children={<Title id="projects" title="MY PROJECTS" />} />
             {/* ProjectsList is not put into Layout because each item inside
             that list is already put into a Layout component. */}
             <ProjectsList />
+            <Layout children={<Title id="aboutme" title="ABOUT ME" />} />
             <Layout children={<MoreAbout />} />
-            <Layout children={<Title title="CONTACT ME" />} />
+            <Layout children={<Title id="contact" title="CONTACT ME" />} />
             <Layout children={<Contacts />} />
             <Footer />
           </div>

@@ -33,6 +33,7 @@ const TechStack = () => {
       initial="hidden"
       variants={variants}
       className="tech-stack-section"
+      id="tech-stack"
     >
       <div className="tech-stack-section__content">
         <AiFillHtml5 size={60} className="tech-stack__item" />

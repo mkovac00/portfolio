@@ -31,6 +31,7 @@ const MoreAbout = () => {
       initial="hidden"
       variants={variants}
       className="about-me"
+      id="aboutme"
     >
       <div className="about-me__image-wrapper">
         <img

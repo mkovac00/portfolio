@@ -19,11 +19,11 @@ const ProjectsList = () => {
   ));
 
   return (
-    <>
+    <div>
       {myProjects.map((project, index) => {
         return <Layout key={index} children={project} />;
       })}
-    </>
+    </div>
   );
 };
 
