@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 import Button from "../button/Button";
 import { aboutMe } from "../../assets/content/about-me";
+import cvAsPdf from "../../assets/Mario_Kovac_CV.pdf";
 
 const variants = {
   visible: { opacity: 1, transition: { duration: 2 } },
@@ -47,7 +48,9 @@ const MoreAbout = () => {
         <p className="about-me__p">{aboutMe.content.paragraph_3}</p>
         <p className="about-me__p">{aboutMe.content.paragraph_4}</p>
         <p className="about-me__p">{aboutMe.content.paragraph_5}</p>
-        <Button text="DOWNLOAD CV" />
+        <a target="_blank" href={cvAsPdf} download="Mario_Kovac_CV">
+          <Button text="DOWNLOAD CV" />
+        </a>
       </div>
     </motion.section>
   );
