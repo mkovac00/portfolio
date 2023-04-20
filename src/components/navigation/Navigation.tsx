@@ -4,6 +4,8 @@ import "./Navigation.scss";
 import { ThemeContext } from "../../contexts/theme-context";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { getDate } from "../../assets/functions/functions";
+
 const Navigation = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +18,8 @@ const Navigation = () => {
   const showHideMenu = () => {
     setIsMenuOpen((previousValue) => !previousValue);
   };
+
+  const todaysDate = getDate();
 
   return (
     <motion.nav className="navigation">
@@ -97,7 +101,7 @@ const Navigation = () => {
 
       <div className="navigation-bot">
         <h4 className="navigation__h4">VOL 1</h4>
-        <h4 className="navigation__h4">14 APRIL 2023</h4>
+        <h4 className="navigation__h4">{todaysDate}</h4>
       </div>
     </motion.nav>
   );
