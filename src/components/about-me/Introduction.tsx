@@ -37,7 +37,9 @@ const Introduction = () => {
       <div className="introduction-content">
         <h1 className="introduction__h1">{introduction.h1}</h1>
         <p className="introduction__p">{introduction.p}</p>
-        <Button text={"CONTACT ME"} />
+        <a className="introduction__a" href="/#contact">
+          <Button text={"CONTACT ME"} />
+        </a>
       </div>
       <div className="introduction-image">
         <img

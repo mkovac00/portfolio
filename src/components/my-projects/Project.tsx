@@ -18,6 +18,8 @@ type ProjectProps = {
   hasDemo: boolean;
   hasCode: boolean;
   reverseDirection: boolean;
+  linkToDemo: string;
+  linkToCode: string;
 };
 
 const Project = (props: ProjectProps) => {
@@ -57,8 +59,16 @@ const Project = (props: ProjectProps) => {
           <h2 className="project-container__h2">{props.title}</h2>
           <p className="project-container__p">{props.content}</p>
           <div className="project-content__buttons">
-            {props.hasDemo && <Button text="DEMO" />}
-            {props.hasCode && <Button text="CODE" />}
+            {props.hasDemo && (
+              <a target="_blank" href={props.linkToDemo}>
+                <Button text="DEMO" />
+              </a>
+            )}
+            {props.hasCode && (
+              <a target="_blank" href={props.linkToCode}>
+                <Button text="CODE" />
+              </a>
+            )}
           </div>
         </div>
       </motion.div>
@@ -79,8 +89,16 @@ const Project = (props: ProjectProps) => {
             {props.content}
           </p>
           <div className="project-content__buttons__smaller-viewport">
-            {props.hasDemo && <Button text="DEMO" />}
-            {props.hasCode && <Button text="CODE" />}
+            {props.hasDemo && (
+              <a target="_blank" href={props.linkToDemo}>
+                <Button text="DEMO" />
+              </a>
+            )}
+            {props.hasCode && (
+              <a target="_blank" href={props.linkToCode}>
+                <Button text="CODE" />
+              </a>
+            )}
           </div>
         </div>
       </div>

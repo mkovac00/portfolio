@@ -15,6 +15,8 @@ const ProjectsList = () => {
       hasDemo={project.title === "TRAVELSHARE" ? false : true}
       hasCode={true}
       reverseDirection={index % 2 === 0 ? false : true}
+      linkToCode={project.linkToCode}
+      linkToDemo={project.linkToDemo}
     />
   ));
 
