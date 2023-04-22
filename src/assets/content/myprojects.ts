@@ -1,6 +1,7 @@
 import myNewsImage from "../images/mynews-screenshot.png";
 import notioImage from "../images/notio-screenshot.png";
 import travelshareImage from "../images/travelshare-screenshot.png";
+import moneytownImage from "../images/moneytown-screenshot.png";
 
 export const projectsList = [
   {
@@ -10,6 +11,14 @@ export const projectsList = [
     image: myNewsImage,
     linkToDemo: "https://admirable-sprite-8863df.netlify.app/",
     linkToCode: "https://github.com/mkovac00/news-react",
+  },
+  {
+    title: "MONEYTOWN",
+    content:
+      "Moneytown is an application that allows you to create your own personal budgets, add any expenses to that budget and go through all of your different budgets, see your spending and delete expenses or whole budgets. Built with React/JavaScript and CSS. Moneytown was a project I decided to build to learn more about React Router Dom features.",
+    image: moneytownImage,
+    linkToDemo: "https://stellular-piroshki-e9fc88.netlify.app/",
+    linkToCode: "https://github.com/mkovac00/moneytown",
   },
   {
     title: "NOTIO",
