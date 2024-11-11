@@ -33,7 +33,7 @@ const Hero = () => {
         <h3 className="hero-section__h3">it's a me,</h3>
         <h1 className="hero-section__h1">MARIO KOVAČ</h1>
         <h4 className="hero-section__h3">
-          design enthusiast, gamer, bookworm, film geek
+          christmas lover, gamer, bookworm, film geek
         </h4>
       </div>
     </motion.section>

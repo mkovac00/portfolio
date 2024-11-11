@@ -48,7 +48,7 @@ const MoreAbout = () => {
         <p className="about-me__p">{aboutMe.content.paragraph_3}</p>
         <p className="about-me__p">{aboutMe.content.paragraph_4}</p>
         <p className="about-me__p">{aboutMe.content.paragraph_5}</p>
-        <a target="_blank" href={cvAsPdf} download="MarioKovac_Resume">
+        <a target="_blank" href={cvAsPdf} download="Mario_Kovac_CV">
           <Button text="DOWNLOAD CV" />
         </a>
       </div>
