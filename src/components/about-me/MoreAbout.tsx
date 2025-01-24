@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 import Button from "../button/Button";
 import { aboutMe } from "../../assets/content/about-me";
-import cvAsPdf from "../../assets/Mario_Kovac_Resume.pdf";
+import cvAsPdf from "../../assets/Mario_Kovac_CV.pdf";
 
 const variants = {
   visible: { opacity: 1, transition: { duration: 2 } },
